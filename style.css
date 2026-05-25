@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Nunito:wght@300;400;500&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  background: #f5f0e8;
+  color: #3d3d3d;
+}
+
+header {
+  background: #4e7c6b;
+  color: #f5f0e8;
+  text-align: center;
+  padding: 2.5rem 1rem;
+}
+
+header h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+header p {
+  font-size: 0.95rem;
+  font-weight: 300;
+  opacity: 0.88;
+  margin-top: 0.4rem;
+  letter-spacing: 0.06em;
+}
+
+.hero {
+  text-align: center;
+  padding: 3.5rem 1.5rem 2.5rem;
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.hero h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #3a5f52;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #6b6b6b;
+  line-height: 1.7;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  padding: 1rem 2rem 4rem;
+}
+
+.card {
+  background: #fffdf8;
+  border: 1px solid #e0d9cc;
+  border-radius: 14px;
+  padding: 1.6rem 1.4rem;
+  text-align: center;
+  width: 165px;
+}
+
+.card h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4e7c6b;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: #6b6b6b;
+  line-height: 1.6;
+}
+
+#chatBtn {
+  position: fixed;
+  bottom: 26px;
+  right: 26px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #4e7c6b;
+  color: #f5f0e8;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(78,124,107,0.35);
+  transition: background 0.2s;
+}
+
+#chatBtn:hover { background: #3a5f52; }
+
+#chatBox {
+  display: none;
+  position: fixed;
+  bottom: 94px;
+  right: 26px;
+  width: 325px;
+  height: 430px;
+  background: #fffdf8;
+  border: 1px solid #e0d9cc;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#chatHeader {
+  background: #4e7c6b;
+  color: #f5f0e8;
+  padding: 13px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
+#chatHeader button {
+  background: none;
+  border: none;
+  color: #f5f0e8;
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+#chatHeader button:hover { opacity: 1; }
+
+#messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #faf7f2;
+}
+
+.bot-msg, .user-msg {
+  padding: 9px 13px;
+  border-radius: 14px;
+  font-size: 0.88rem;
+  font-weight: 400;
+  max-width: 85%;
+  line-height: 1.5;
+}
+
+.bot-msg {
+  background: #ece7dc;
+  color: #3d3d3d;
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+.user-msg {
+  background: #4e7c6b;
+  color: #f5f0e8;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+#inputArea {
+  display: flex;
+  border-top: 1px solid #e0d9cc;
+  padding: 9px 10px;
+  gap: 7px;
+  background: #fffdf8;
+}
+
+#inputArea input {
+  flex: 1;
+  padding: 8px 14px;
+  border: 1px solid #d5cec3;
+  border-radius: 20px;
+  font-size: 0.88rem;
+  font-family: 'Nunito', sans-serif;
+  background: #faf7f2;
+  color: #3d3d3d;
+  outline: none;
+  transition: border 0.2s;
+}
+
+#inputArea input:focus { border-color: #4e7c6b; }
+#inputArea input::placeholder { color: #aaa; }
+
+#inputArea button {
+  background: #4e7c6b;
+  color: #f5f0e8;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+#inputArea button:hover { background: #3a5f52; }
