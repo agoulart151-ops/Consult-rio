@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dra. Fabiana C. Lago — Psicóloga</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Dra. Fabiana C. Lago</h1>
+    <p>Psicóloga Clínica — CRP 06/224869</p>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Um espaço seguro para cuidar de você.</h2>
+      <p>Atendimento online e acolhedor. Agende sua consulta pelo chat ou entre em contato pelo WhatsApp.</p>
+    </section>
+
+    <section class="info">
+      <div class="card">
+        <h3>🕐 Horários</h3>
+        <p>Segunda a quinta<br/>8h às 21h</p>
+      </div>
+      <div class="card">
+        <h3>💻 Online</h3>
+        <p>Atendimento 100%<br/>online</p>
+      </div>
+      <div class="card">
+        <h3>📱 Contato</h3>
+        <p>(19) 92006-8168<br/>WhatsApp</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- BOTÃO DO CHAT -->
+  <button id="chatBtn" onclick="toggleChat()">💬</button>
+
+  <div id="chatBox">
+    <div id="chatHeader">
+      <span>Íris — Assistente Virtual</span>
+      <button onclick="toggleChat()">✕</button>
+    </div>
+    <div id="messages">
+      <div class="bot-msg">Olá! Sou a Íris, assistente da Dra. Fabiana. Como posso te ajudar hoje? 🌿</div>
+    </div>
+    <div id="inputArea">
+      <input type="text" id="userInput" placeholder="Digite sua mensagem..."
+             onkeydown="if(event.key==='Enter') sendMessage()" />
+      <button onclick="sendMessage()">➤</button>
+    </div>
+  </div>
+
+  <script src="agent.js"></script>
+</body>
+</html>
