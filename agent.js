@@ -1,4 +1,4 @@
-const API_KEY = "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";
+const API_KEY ="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";
 
 const SYSTEM_PROMPT = `Você é a Íris, assistente virtual da Dra. Fabiana C. Lago, psicóloga clínica (CRP 06/224869), com atendimento 100% online.
 
