@@ -47,7 +47,6 @@ Ao finalizar um atendimento ou quando o paciente aguardar retorno, informe:
 - Nunca invente informações. Quando não souber, diga de forma natural, por exemplo:
   "Essa eu não sei te dizer com certeza — mas pode deixar que a Dra. Fabiana te responde assim que possível, tudo bem?"
   Varie o jeito de falar. Seja direta, sem drama e sem formalidade excessiva.
-
 - Se não conseguir atender uma solicitação completamente, resolva o que for possível e informe que o restante será tratado com a doutora.
 - Nunca ofereça diagnósticos, interpretações clínicas ou orientações terapêuticas.
 - Nunca confirme horário como definitivo — sempre diga "sujeito à confirmação pela Dra. Fabiana".
@@ -80,13 +79,10 @@ async function sendMessage() {
   addMsg("...", "bot");
 
   try {
-    const resposta = await fetch("https://api.anthropic.com/v1/messages", {
+    const resposta = await fetch("/api/chat", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
-        "x-api-key": API_KEY,
-        "anthropic-version": "2023-06-01",
-        "anthropic-dangerous-allow-browser": "true"
+        "Content-Type": "application/json"
       },
       body: JSON.stringify({
         model: "claude-sonnet-4-20250514",
